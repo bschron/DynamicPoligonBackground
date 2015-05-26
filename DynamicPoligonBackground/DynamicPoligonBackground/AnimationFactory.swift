@@ -49,7 +49,7 @@ internal class AnimationFactory {
             }
         }
     }
-    internal var countEstimatedObjectsToAnimate: Int = 6
+    internal var countEstimatedObjectsToAnimate: Int = 0
     private var maximumPoolSize: Int {
         return self.countEstimatedObjectsToAnimate / 2
     }
@@ -118,6 +118,7 @@ internal class AnimationFactory {
     
     private func privateMakeAnimation(target: Animateable, isBrandNewClient new: Bool) {
         var animation: AbstractAnimation?
+        self.countEstimatedObjectsToAnimate++
         
         if new {
             animation = self.makeChangeColorAnimation(target)
@@ -142,6 +143,7 @@ internal class AnimationFactory {
     }
 
     private func reuse(animation: AbstractAnimation) {
+        self.countEstimatedObjectsToAnimate--
         if animation is FlipAnimation {
             self.flipAnimationPool += [animation as! FlipAnimation]
         }
