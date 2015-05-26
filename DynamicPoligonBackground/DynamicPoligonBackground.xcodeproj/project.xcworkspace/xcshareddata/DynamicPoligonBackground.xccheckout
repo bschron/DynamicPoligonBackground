@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>23C0F47C-394C-4C46-8981-363C46644F02</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DynamicPoligonBackground</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>60AE24BE2868E6D2743B6F9FA0F55CA993D200AF</key>
+		<string>https://github.com/bschron/DynamicPoligonBackground.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DynamicPoligonBackground/DynamicPoligonBackground.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>60AE24BE2868E6D2743B6F9FA0F55CA993D200AF</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bschron/DynamicPoligonBackground.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>60AE24BE2868E6D2743B6F9FA0F55CA993D200AF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>60AE24BE2868E6D2743B6F9FA0F55CA993D200AF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DynamicPoligonBackground</string>
+		</dict>
+	</array>
+</dict>
+</plist>
