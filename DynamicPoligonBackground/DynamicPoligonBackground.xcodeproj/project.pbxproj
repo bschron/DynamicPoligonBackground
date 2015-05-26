@@ -23,6 +23,7 @@
 		86AB56DA1B14B04D00C6A8E4 /* Animateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB56D91B14B04D00C6A8E4 /* Animateable.swift */; };
 		86AB56DC1B14BAA600C6A8E4 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */; };
 		86B326271B13AF7E006242AE /* OrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B326261B13AF7E006242AE /* OrderedList.swift */; };
+		86FD7D641B15192C00947434 /* DropAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD7D631B15192C00947434 /* DropAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		86AB56D91B14B04D00C6A8E4 /* Animateable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animateable.swift; sourceTree = "<group>"; };
 		86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		86B326261B13AF7E006242AE /* OrderedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedList.swift; sourceTree = "<group>"; };
+		86FD7D631B15192C00947434 /* DropAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				864D99D61B115BF100459B0C /* AnimationFactory.swift */,
 				864D99DA1B115CE200459B0C /* AbstractAnimation.swift */,
 				864D99DC1B11600700459B0C /* FlipAnimation.swift */,
+				86FD7D631B15192C00947434 /* DropAnimation.swift */,
 				864D99DE1B11658400459B0C /* ChangeColorAnimation.swift */,
 				864D99E01B11692700459B0C /* ChangeAlphaAnimation.swift */,
 				869CAC831B1206CD0032EB47 /* DiamondView.swift */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				864D99B61B115A2E00459B0C /* ViewController.swift in Sources */,
+				86FD7D641B15192C00947434 /* DropAnimation.swift in Sources */,
 				864D99E11B11692700459B0C /* ChangeAlphaAnimation.swift in Sources */,
 				864D99DF1B11658400459B0C /* ChangeColorAnimation.swift in Sources */,
 				86AB56DC1B14BAA600C6A8E4 /* RGBColor.swift in Sources */,

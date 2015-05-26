@@ -116,30 +116,17 @@ class DiamondView: Animateable {
         self.leftImageView?.frame.size.width /= 2
         self.rightImageView?.frame.origin.x += self.frame.width / 2
     }
-    /*
-    func animateImage(no:Int)
-    {
-        var imgNumber: Int = no
-        let t:NSTimeInterval = 1;
-        let t1:NSTimeInterval = 0;
-        var name:String = "avatar\(imgNumber).png"
-        imgView!.alpha = 0.4
-        imgView!.image = UIImage(named:name);
-        
-        //code to animate bg with delay 2 and after completion it recursively calling animateImage method
-        UIView.animateWithDuration(2.0, delay: 0, options:UIViewAnimationOptions.CurveEaseOut, animations: {() in
-            self.imgView!.alpha = 1.0;
-            },
-            completion: {(Bool) in
-                imgNumber++;
-                if imgNumber>4  //only for 4 image
-                {
-                    imgNumber = 1
-                }
-                self.animateImage(imgNumber);
-        })
+    
+    override func hide() {
+        self.rightImageView?.alpha = 0
+        self.leftImageView?.alpha = 0
     }
-    */
+    
+    override func show() {
+        self.rightImageView?.alpha = 1
+        self.leftImageView?.alpha = 1
+    }
+    
     struct wrap {
         static let left = UIImage(named: "triangle<")
         static let right = UIImage(named: "triangle>")

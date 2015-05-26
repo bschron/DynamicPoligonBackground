@@ -11,4 +11,10 @@ import UIKit
 
 class Animateable: UIView {
     var colorSet: [UIColor]?
+    func hide(){
+        self.alpha = 0
+    }
+    func show(){
+        self.alpha = 1
+    }
 }

@@ -14,12 +14,6 @@ internal class AbstractAnimation {
     internal var randomDuration: Double = 0
     internal var randomDelay: Double = 0
     internal var animationOptions: UIViewAnimationOptions = UIViewAnimationOptions.CurveLinear
-    internal var didImplementDuration: Bool {
-        return false
-    }
-    internal var didImplementDelay: Bool {
-        return false
-    }
     internal var target: Animateable?
     internal var reuse: (() -> ())?
     

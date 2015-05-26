@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 enum AnimationType: Int {
-    case Flip = 0, ChangeColor = 1, ChangeAlpha = 2
+    case Flip = 0, ChangeColor = 1, ChangeAlpha = 2, DropAnimation = 3
     static var count: Int {
-        return 3
+        return 4
     }
 }
 
@@ -22,7 +22,7 @@ internal class AnimationFactory {
         return duration
     }
     private var randomDelay: Double {
-        let delay = Double(arc4random_uniform(12) + 1)
+        let delay = Double(arc4random_uniform(20) + 2)
         return delay
     }
     private var randomAnimationType: AnimationType.RawValue {
@@ -46,6 +46,13 @@ internal class AnimationFactory {
         didSet {
             if self.changeAlphaAnimationPool.count > self.maximumPoolSize {
                 self.changeAlphaAnimationPool.removeLast()
+            }
+        }
+    }
+    private var dropAnimationPool: [DropAnimation] = [] {
+        didSet {
+            if self.dropAnimationPool.count > self.maximumPoolSize {
+                self.dropAnimationPool.removeLast()
             }
         }
     }
@@ -112,6 +119,25 @@ internal class AnimationFactory {
         return animation
     }
     
+    private func makeDropAnimation(target: Animateable) -> AbstractAnimation {
+        var animation: AbstractAnimation!
+        let reuseFunction: () -> () = {
+            self.privateMakeAnimation(animation.target!, isBrandNewClient: false)
+            self.reuse(animation)
+        }
+        if self.dropAnimationPool.count <= 0 {
+            animation = DropAnimation(target: target)
+        }
+        else {
+            animation = self.dropAnimationPool.last!
+            self.dropAnimationPool.removeLast()
+        }
+        
+        animation.reuse = reuseFunction
+        
+        return animation
+    }
+    
     internal func makeAnimation(target: Animateable) {
         self.privateMakeAnimation(target, isBrandNewClient: true)
     }
@@ -131,6 +157,8 @@ internal class AnimationFactory {
                 animation = self.makeChangeColorAnimation(target)
             case AnimationType.ChangeAlpha.rawValue:
                 animation = self.makeChangeAlphaAnimation(target)
+            case AnimationType.DropAnimation.rawValue:
+                animation = self.makeDropAnimation(target)
             default:
                 animation = nil
             }
@@ -152,6 +180,9 @@ internal class AnimationFactory {
         }
         else if animation is ChangeColorAnimation {
             self.changeColorAnimationPool += [animation as! ChangeColorAnimation]
+        }
+        else if animation is DropAnimation {
+            self.dropAnimationPool += [animation as! DropAnimation]
         }
         
         animation.target = nil
