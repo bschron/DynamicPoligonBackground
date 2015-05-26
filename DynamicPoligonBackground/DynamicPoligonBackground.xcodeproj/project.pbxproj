@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		864D99B41B115A2E00459B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99B31B115A2E00459B0C /* AppDelegate.swift */; };
+		864D99B61B115A2E00459B0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99B51B115A2E00459B0C /* ViewController.swift */; };
+		864D99B91B115A2F00459B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864D99B71B115A2F00459B0C /* Main.storyboard */; };
+		864D99BB1B115A2F00459B0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 864D99BA1B115A2F00459B0C /* Images.xcassets */; };
+		864D99BE1B115A2F00459B0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864D99BC1B115A2F00459B0C /* LaunchScreen.xib */; };
+		864D99CA1B115A2F00459B0C /* DynamicPoligonBackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99C91B115A2F00459B0C /* DynamicPoligonBackgroundTests.swift */; };
+		864D99D51B115A8E00459B0C /* DynamicPoligonBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99D41B115A8E00459B0C /* DynamicPoligonBackground.swift */; };
+		864D99D71B115BF100459B0C /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99D61B115BF100459B0C /* AnimationFactory.swift */; };
+		864D99DB1B115CE200459B0C /* AbstractAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99DA1B115CE200459B0C /* AbstractAnimation.swift */; };
+		864D99DD1B11600700459B0C /* FlipAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99DC1B11600700459B0C /* FlipAnimation.swift */; };
+		864D99DF1B11658400459B0C /* ChangeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99DE1B11658400459B0C /* ChangeColorAnimation.swift */; };
+		864D99E11B11692700459B0C /* ChangeAlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D99E01B11692700459B0C /* ChangeAlphaAnimation.swift */; };
+		869CAC841B1206CD0032EB47 /* DiamondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CAC831B1206CD0032EB47 /* DiamondView.swift */; };
+		86AB56DA1B14B04D00C6A8E4 /* Animateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB56D91B14B04D00C6A8E4 /* Animateable.swift */; };
+		86AB56DC1B14BAA600C6A8E4 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */; };
+		86B326271B13AF7E006242AE /* OrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B326261B13AF7E006242AE /* OrderedList.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		864D99C41B115A2F00459B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 864D99A61B115A2E00459B0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 864D99AD1B115A2E00459B0C;
+			remoteInfo = DynamicPoligonBackground;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		864D99AE1B115A2E00459B0C /* DynamicPoligonBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicPoligonBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		864D99B21B115A2E00459B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		864D99B31B115A2E00459B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		864D99B51B115A2E00459B0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		864D99B81B115A2F00459B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		864D99BA1B115A2F00459B0C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		864D99BD1B115A2F00459B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		864D99C31B115A2F00459B0C /* DynamicPoligonBackgroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicPoligonBackgroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		864D99C81B115A2F00459B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		864D99C91B115A2F00459B0C /* DynamicPoligonBackgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicPoligonBackgroundTests.swift; sourceTree = "<group>"; };
+		864D99D41B115A8E00459B0C /* DynamicPoligonBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicPoligonBackground.swift; sourceTree = "<group>"; };
+		864D99D61B115BF100459B0C /* AnimationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationFactory.swift; sourceTree = "<group>"; };
+		864D99DA1B115CE200459B0C /* AbstractAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractAnimation.swift; sourceTree = "<group>"; };
+		864D99DC1B11600700459B0C /* FlipAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipAnimation.swift; sourceTree = "<group>"; };
+		864D99DE1B11658400459B0C /* ChangeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeColorAnimation.swift; sourceTree = "<group>"; };
+		864D99E01B11692700459B0C /* ChangeAlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAlphaAnimation.swift; sourceTree = "<group>"; };
+		869CAC831B1206CD0032EB47 /* DiamondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondView.swift; sourceTree = "<group>"; };
+		86AB56D91B14B04D00C6A8E4 /* Animateable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animateable.swift; sourceTree = "<group>"; };
+		86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
+		86B326261B13AF7E006242AE /* OrderedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedList.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		864D99AB1B115A2E00459B0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		864D99C01B115A2F00459B0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		864D99A51B115A2E00459B0C = {
+			isa = PBXGroup;
+			children = (
+				864D99B01B115A2E00459B0C /* DynamicPoligonBackground */,
+				864D99C61B115A2F00459B0C /* DynamicPoligonBackgroundTests */,
+				864D99AF1B115A2E00459B0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		864D99AF1B115A2E00459B0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				864D99AE1B115A2E00459B0C /* DynamicPoligonBackground.app */,
+				864D99C31B115A2F00459B0C /* DynamicPoligonBackgroundTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		864D99B01B115A2E00459B0C /* DynamicPoligonBackground */ = {
+			isa = PBXGroup;
+			children = (
+				864D99D31B115A7100459B0C /* Background */,
+				864D99B31B115A2E00459B0C /* AppDelegate.swift */,
+				864D99B51B115A2E00459B0C /* ViewController.swift */,
+				864D99B71B115A2F00459B0C /* Main.storyboard */,
+				864D99BA1B115A2F00459B0C /* Images.xcassets */,
+				864D99BC1B115A2F00459B0C /* LaunchScreen.xib */,
+				864D99B11B115A2E00459B0C /* Supporting Files */,
+			);
+			path = DynamicPoligonBackground;
+			sourceTree = "<group>";
+		};
+		864D99B11B115A2E00459B0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				864D99B21B115A2E00459B0C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		864D99C61B115A2F00459B0C /* DynamicPoligonBackgroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				864D99C91B115A2F00459B0C /* DynamicPoligonBackgroundTests.swift */,
+				864D99C71B115A2F00459B0C /* Supporting Files */,
+			);
+			path = DynamicPoligonBackgroundTests;
+			sourceTree = "<group>";
+		};
+		864D99C71B115A2F00459B0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				864D99C81B115A2F00459B0C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		864D99D31B115A7100459B0C /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				864D99D41B115A8E00459B0C /* DynamicPoligonBackground.swift */,
+				864D99D61B115BF100459B0C /* AnimationFactory.swift */,
+				864D99DA1B115CE200459B0C /* AbstractAnimation.swift */,
+				864D99DC1B11600700459B0C /* FlipAnimation.swift */,
+				864D99DE1B11658400459B0C /* ChangeColorAnimation.swift */,
+				864D99E01B11692700459B0C /* ChangeAlphaAnimation.swift */,
+				869CAC831B1206CD0032EB47 /* DiamondView.swift */,
+				86B326261B13AF7E006242AE /* OrderedList.swift */,
+				86AB56D91B14B04D00C6A8E4 /* Animateable.swift */,
+				86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */,
+			);
+			name = Background;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		864D99AD1B115A2E00459B0C /* DynamicPoligonBackground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 864D99CD1B115A2F00459B0C /* Build configuration list for PBXNativeTarget "DynamicPoligonBackground" */;
+			buildPhases = (
+				864D99AA1B115A2E00459B0C /* Sources */,
+				864D99AB1B115A2E00459B0C /* Frameworks */,
+				864D99AC1B115A2E00459B0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicPoligonBackground;
+			productName = DynamicPoligonBackground;
+			productReference = 864D99AE1B115A2E00459B0C /* DynamicPoligonBackground.app */;
+			productType = "com.apple.product-type.application";
+		};
+		864D99C21B115A2F00459B0C /* DynamicPoligonBackgroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 864D99D01B115A2F00459B0C /* Build configuration list for PBXNativeTarget "DynamicPoligonBackgroundTests" */;
+			buildPhases = (
+				864D99BF1B115A2F00459B0C /* Sources */,
+				864D99C01B115A2F00459B0C /* Frameworks */,
+				864D99C11B115A2F00459B0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				864D99C51B115A2F00459B0C /* PBXTargetDependency */,
+			);
+			name = DynamicPoligonBackgroundTests;
+			productName = DynamicPoligonBackgroundTests;
+			productReference = 864D99C31B115A2F00459B0C /* DynamicPoligonBackgroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		864D99A61B115A2E00459B0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "IC-UFAL";
+				TargetAttributes = {
+					864D99AD1B115A2E00459B0C = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					864D99C21B115A2F00459B0C = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 864D99AD1B115A2E00459B0C;
+					};
+				};
+			};
+			buildConfigurationList = 864D99A91B115A2E00459B0C /* Build configuration list for PBXProject "DynamicPoligonBackground" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 864D99A51B115A2E00459B0C;
+			productRefGroup = 864D99AF1B115A2E00459B0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				864D99AD1B115A2E00459B0C /* DynamicPoligonBackground */,
+				864D99C21B115A2F00459B0C /* DynamicPoligonBackgroundTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		864D99AC1B115A2E00459B0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				864D99B91B115A2F00459B0C /* Main.storyboard in Resources */,
+				864D99BE1B115A2F00459B0C /* LaunchScreen.xib in Resources */,
+				864D99BB1B115A2F00459B0C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		864D99C11B115A2F00459B0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		864D99AA1B115A2E00459B0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				864D99B61B115A2E00459B0C /* ViewController.swift in Sources */,
+				864D99E11B11692700459B0C /* ChangeAlphaAnimation.swift in Sources */,
+				864D99DF1B11658400459B0C /* ChangeColorAnimation.swift in Sources */,
+				86AB56DC1B14BAA600C6A8E4 /* RGBColor.swift in Sources */,
+				864D99D71B115BF100459B0C /* AnimationFactory.swift in Sources */,
+				869CAC841B1206CD0032EB47 /* DiamondView.swift in Sources */,
+				86B326271B13AF7E006242AE /* OrderedList.swift in Sources */,
+				864D99B41B115A2E00459B0C /* AppDelegate.swift in Sources */,
+				864D99DD1B11600700459B0C /* FlipAnimation.swift in Sources */,
+				86AB56DA1B14B04D00C6A8E4 /* Animateable.swift in Sources */,
+				864D99D51B115A8E00459B0C /* DynamicPoligonBackground.swift in Sources */,
+				864D99DB1B115CE200459B0C /* AbstractAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		864D99BF1B115A2F00459B0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				864D99CA1B115A2F00459B0C /* DynamicPoligonBackgroundTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		864D99C51B115A2F00459B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 864D99AD1B115A2E00459B0C /* DynamicPoligonBackground */;
+			targetProxy = 864D99C41B115A2F00459B0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		864D99B71B115A2F00459B0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				864D99B81B115A2F00459B0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		864D99BC1B115A2F00459B0C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				864D99BD1B115A2F00459B0C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		864D99CB1B115A2F00459B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		864D99CC1B115A2F00459B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		864D99CE1B115A2F00459B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DynamicPoligonBackground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		864D99CF1B115A2F00459B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DynamicPoligonBackground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		864D99D11B115A2F00459B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DynamicPoligonBackgroundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicPoligonBackground.app/DynamicPoligonBackground";
+			};
+			name = Debug;
+		};
+		864D99D21B115A2F00459B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DynamicPoligonBackgroundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicPoligonBackground.app/DynamicPoligonBackground";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		864D99A91B115A2E00459B0C /* Build configuration list for PBXProject "DynamicPoligonBackground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				864D99CB1B115A2F00459B0C /* Debug */,
+				864D99CC1B115A2F00459B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		864D99CD1B115A2F00459B0C /* Build configuration list for PBXNativeTarget "DynamicPoligonBackground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				864D99CE1B115A2F00459B0C /* Debug */,
+				864D99CF1B115A2F00459B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		864D99D01B115A2F00459B0C /* Build configuration list for PBXNativeTarget "DynamicPoligonBackgroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				864D99D11B115A2F00459B0C /* Debug */,
+				864D99D21B115A2F00459B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 864D99A61B115A2E00459B0C /* Project object */;
+}
