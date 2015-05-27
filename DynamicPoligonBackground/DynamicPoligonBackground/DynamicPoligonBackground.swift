@@ -18,7 +18,7 @@ class DynamicPoligonBackground: UIView {
     }
     private var poligons: [DiamondView] = []
     private var numberOfLines: CGFloat {
-        return self.frame.height / self.poligonHeight
+        return self.frame.height / self.poligonHeight * 1.2
     }
     private let poligonsPerLine: CGFloat = 5
     
