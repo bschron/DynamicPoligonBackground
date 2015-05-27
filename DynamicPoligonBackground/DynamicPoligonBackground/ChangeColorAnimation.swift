@@ -22,6 +22,9 @@ internal class ChangeColorAnimation: AbstractAnimation {
         let index = Int(arc4random_uniform(UInt32(self.colorSet.count)))
         return self.colorSet[index]
     }
+    override var type: AnimationType? {
+        return AnimationType.ChangeColor
+    }
     
     override func animation() {
         self.target!.alpha = 0

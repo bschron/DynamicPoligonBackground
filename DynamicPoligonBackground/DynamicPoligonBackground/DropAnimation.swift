@@ -27,6 +27,9 @@ internal class DropAnimation: AbstractAnimation {
     private var fall: CGFloat {
         return self.target!.frame.height * 10
     }
+    override var type: AnimationType? {
+        return AnimationType.Drop
+    }
     
     override func animation() {
         self.originalY = self.target!.frame.origin.y

@@ -16,6 +16,9 @@ internal class ChangeAlphaAnimation: AbstractAnimation {
             self.lastDuration = self.randomDuration
         }
     }
+    override var type: AnimationType? {
+        return AnimationType.ChangeAlpha
+    }
 
     private var lastDuration: Double?
     

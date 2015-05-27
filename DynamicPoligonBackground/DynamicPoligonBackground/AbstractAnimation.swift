@@ -14,8 +14,11 @@ internal class AbstractAnimation {
     internal var randomDuration: Double = 0
     internal var randomDelay: Double = 0
     internal var animationOptions: UIViewAnimationOptions = UIViewAnimationOptions.CurveLinear
-    internal var target: Animateable?
+    internal var target: Animateable? 
     internal var reuse: (() -> ())?
+    internal var type: AnimationType? {
+        return nil
+    }
     
     required internal init(target: Animateable) {
         self.target = target

@@ -9,47 +9,38 @@
 import Foundation
 import UIKit
 
-enum AnimationType: Int {
-    case Flip = 0, ChangeColor = 1, ChangeAlpha = 2, DropAnimation = 3
-    static var count: Int {
-        return 4
-    }
-}
-
 internal class AnimationFactory {
     private var randomDuration: Double {
         let duration = Double(arc4random_uniform(2) + 1) / 2
         return duration
     }
     private var randomDelay: Double {
+        
         let delay = Double(arc4random_uniform(20) + 2)
         return delay
     }
-    private var randomAnimationType: AnimationType.RawValue {
-        return Int(arc4random_uniform(UInt32(AnimationType.count)))
-    }
-    private var flipAnimationPool: [FlipAnimation] = [] {
+    private var flipAnimationPool: List<FlipAnimation> = List<FlipAnimation>() {
         didSet {
             if self.flipAnimationPool.count > self.maximumPoolSize {
                 self.flipAnimationPool.removeLast()
             }
         }
     }
-    private var changeColorAnimationPool: [ChangeColorAnimation] = [] {
+    private var changeColorAnimationPool: List<ChangeColorAnimation> = List<ChangeColorAnimation>() {
         didSet {
             if self.changeColorAnimationPool.count > self.maximumPoolSize {
                 self.changeColorAnimationPool.removeLast()
             }
         }
     }
-    private var changeAlphaAnimationPool: [ChangeAlphaAnimation] = [] {
+    private var changeAlphaAnimationPool: List<ChangeAlphaAnimation> = List<ChangeAlphaAnimation>() {
         didSet {
             if self.changeAlphaAnimationPool.count > self.maximumPoolSize {
                 self.changeAlphaAnimationPool.removeLast()
             }
         }
     }
-    private var dropAnimationPool: [DropAnimation] = [] {
+    private var dropAnimationPool: List<DropAnimation> = List<DropAnimation>() {
         didSet {
             if self.dropAnimationPool.count > self.maximumPoolSize {
                 self.dropAnimationPool.removeLast()
@@ -61,81 +52,17 @@ internal class AnimationFactory {
         return self.countEstimatedObjectsToAnimate / 2
     }
     
-    private func makeFlipAnimation(target: Animateable) -> AbstractAnimation {
-        var animation: AbstractAnimation!
-        let reuseFunction: () -> () = {
-            self.privateMakeAnimation(animation.target!, isBrandNewClient: false)
-            self.reuse(animation)
+    private func getPool(forAnimationType type: AnimationType) -> NSMutableArray{
+        switch type {
+        case .ChangeAlpha:
+            return self.changeAlphaAnimationPool.list
+        case .ChangeColor:
+            return self.changeColorAnimationPool.list
+        case .Drop:
+            return self.dropAnimationPool.list
+        case .Flip:
+            return self.flipAnimationPool.list
         }
-        
-        if self.flipAnimationPool.count <= 0 {
-            animation = FlipAnimation(target: target)
-        }
-        else {
-            animation = self.flipAnimationPool.last!
-            self.flipAnimationPool.removeLast()
-        }
-        
-        animation.reuse = reuseFunction
-        
-        return animation
-    }
-    
-    private func makeChangeColorAnimation(target: Animateable) -> AbstractAnimation {
-        var animation: AbstractAnimation!
-        let reuseFunction: () -> () = {
-            self.privateMakeAnimation(animation.target!, isBrandNewClient: false)
-            self.reuse(animation)
-        }
-        if self.changeColorAnimationPool.count <= 0 {
-            animation = ChangeColorAnimation(target: target)
-        }
-        else {
-            animation = self.changeColorAnimationPool.last!
-            self.changeColorAnimationPool.removeLast()
-        }
-        
-        animation.reuse = reuseFunction
-        
-        return animation
-    }
-    
-    private func makeChangeAlphaAnimation(target: Animateable) -> AbstractAnimation {
-        var animation: AbstractAnimation!
-        let reuseFunction: () -> () = {
-            self.privateMakeAnimation(animation.target!, isBrandNewClient: false)
-            self.reuse(animation)
-        }
-        if self.changeAlphaAnimationPool.count <= 0 {
-            animation = ChangeAlphaAnimation(target: target)
-        }
-        else {
-            animation = self.changeAlphaAnimationPool.last!
-            self.changeAlphaAnimationPool.removeLast()
-        }
-        
-        animation.reuse = reuseFunction
-        
-        return animation
-    }
-    
-    private func makeDropAnimation(target: Animateable) -> AbstractAnimation {
-        var animation: AbstractAnimation!
-        let reuseFunction: () -> () = {
-            self.privateMakeAnimation(animation.target!, isBrandNewClient: false)
-            self.reuse(animation)
-        }
-        if self.dropAnimationPool.count <= 0 {
-            animation = DropAnimation(target: target)
-        }
-        else {
-            animation = self.dropAnimationPool.last!
-            self.dropAnimationPool.removeLast()
-        }
-        
-        animation.reuse = reuseFunction
-        
-        return animation
     }
     
     internal func makeAnimation(target: Animateable) {
@@ -146,43 +73,55 @@ internal class AnimationFactory {
         var animation: AbstractAnimation?
         self.countEstimatedObjectsToAnimate++
         
+        let type: AnimationType!
+        
         if new {
-            animation = self.makeChangeColorAnimation(target)
+            type = AnimationType.ChangeColor
         }
         else {
-            switch randomAnimationType {
-            case AnimationType.Flip.rawValue:
-                animation = self.makeFlipAnimation(target)
-            case AnimationType.ChangeColor.rawValue:
-                animation = self.makeChangeColorAnimation(target)
-            case AnimationType.ChangeAlpha.rawValue:
-                animation = self.makeChangeAlphaAnimation(target)
-            case AnimationType.DropAnimation.rawValue:
-                animation = self.makeDropAnimation(target)
-            default:
-                animation = nil
-            }
+            type = AnimationType.random()
         }
         
-        animation?.target = target
-        animation?.randomDelay = self.randomDelay
-        animation?.randomDuration = self.randomDuration
+        animation = self.setAnimation(forTarget: target, AnimationType: type)
+        
         animation?.animate()
+    }
+    
+    private func setAnimation(forTarget target: Animateable, AnimationType type: AnimationType) -> AbstractAnimation {
+        var animation: AbstractAnimation!
+        var pool = self.getPool(forAnimationType: type)
+        
+        if pool.count <= 0 {
+            animation = AnimationType.animation(forType: type, forTarget: target)
+        }
+        else {
+            animation = pool.lastObject as! AbstractAnimation
+            pool.removeLastObject()
+        }
+        
+        animation.target = target
+        animation.randomDelay = self.randomDelay
+        animation.randomDuration = self.randomDuration
+        animation.reuse = {
+            self.privateMakeAnimation(animation.target!, isBrandNewClient: false)
+            self.reuse(animation)
+        }
+        
+        return animation
     }
 
     private func reuse(animation: AbstractAnimation) {
         self.countEstimatedObjectsToAnimate--
-        if animation is FlipAnimation {
-            self.flipAnimationPool += [animation as! FlipAnimation]
-        }
-        else if animation is ChangeAlphaAnimation {
-            self.changeAlphaAnimationPool += [animation as! ChangeAlphaAnimation]
-        }
-        else if animation is ChangeColorAnimation {
-            self.changeColorAnimationPool += [animation as! ChangeColorAnimation]
-        }
-        else if animation is DropAnimation {
-            self.dropAnimationPool += [animation as! DropAnimation]
+        
+        switch animation.type! {
+        case .ChangeAlpha:
+            self.changeAlphaAnimationPool.insert(animation as! ChangeAlphaAnimation)
+        case .ChangeColor:
+            self.changeColorAnimationPool.insert(animation as! ChangeColorAnimation)
+        case .Drop:
+            self.dropAnimationPool.insert(animation as! DropAnimation)
+        case .Flip:
+            self.flipAnimationPool.insert(animation as! FlipAnimation)
         }
         
         animation.target = nil

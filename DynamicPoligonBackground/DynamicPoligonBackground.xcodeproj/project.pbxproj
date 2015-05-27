@@ -22,7 +22,8 @@
 		869CAC841B1206CD0032EB47 /* DiamondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CAC831B1206CD0032EB47 /* DiamondView.swift */; };
 		86AB56DA1B14B04D00C6A8E4 /* Animateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB56D91B14B04D00C6A8E4 /* Animateable.swift */; };
 		86AB56DC1B14BAA600C6A8E4 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */; };
-		86B326271B13AF7E006242AE /* OrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B326261B13AF7E006242AE /* OrderedList.swift */; };
+		86CC5FD41B153F6800E1A4D5 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC5FD31B153F6800E1A4D5 /* List.swift */; };
+		86CC5FD81B1547DE00E1A4D5 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC5FD71B1547DE00E1A4D5 /* AnimationType.swift */; };
 		86FD7D641B15192C00947434 /* DropAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD7D631B15192C00947434 /* DropAnimation.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +57,8 @@
 		869CAC831B1206CD0032EB47 /* DiamondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondView.swift; sourceTree = "<group>"; };
 		86AB56D91B14B04D00C6A8E4 /* Animateable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animateable.swift; sourceTree = "<group>"; };
 		86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
-		86B326261B13AF7E006242AE /* OrderedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedList.swift; sourceTree = "<group>"; };
+		86CC5FD31B153F6800E1A4D5 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		86CC5FD71B1547DE00E1A4D5 /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		86FD7D631B15192C00947434 /* DropAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,12 +143,13 @@
 				864D99D41B115A8E00459B0C /* DynamicPoligonBackground.swift */,
 				864D99D61B115BF100459B0C /* AnimationFactory.swift */,
 				864D99DA1B115CE200459B0C /* AbstractAnimation.swift */,
+				86CC5FD71B1547DE00E1A4D5 /* AnimationType.swift */,
 				864D99DC1B11600700459B0C /* FlipAnimation.swift */,
 				86FD7D631B15192C00947434 /* DropAnimation.swift */,
 				864D99DE1B11658400459B0C /* ChangeColorAnimation.swift */,
 				864D99E01B11692700459B0C /* ChangeAlphaAnimation.swift */,
 				869CAC831B1206CD0032EB47 /* DiamondView.swift */,
-				86B326261B13AF7E006242AE /* OrderedList.swift */,
+				86CC5FD31B153F6800E1A4D5 /* List.swift */,
 				86AB56D91B14B04D00C6A8E4 /* Animateable.swift */,
 				86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */,
 			);
@@ -260,9 +263,10 @@
 				86AB56DC1B14BAA600C6A8E4 /* RGBColor.swift in Sources */,
 				864D99D71B115BF100459B0C /* AnimationFactory.swift in Sources */,
 				869CAC841B1206CD0032EB47 /* DiamondView.swift in Sources */,
-				86B326271B13AF7E006242AE /* OrderedList.swift in Sources */,
 				864D99B41B115A2E00459B0C /* AppDelegate.swift in Sources */,
+				86CC5FD41B153F6800E1A4D5 /* List.swift in Sources */,
 				864D99DD1B11600700459B0C /* FlipAnimation.swift in Sources */,
+				86CC5FD81B1547DE00E1A4D5 /* AnimationType.swift in Sources */,
 				86AB56DA1B14B04D00C6A8E4 /* Animateable.swift in Sources */,
 				864D99D51B115A8E00459B0C /* DynamicPoligonBackground.swift in Sources */,
 				864D99DB1B115CE200459B0C /* AbstractAnimation.swift in Sources */,

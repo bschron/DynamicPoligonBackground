@@ -16,6 +16,9 @@ internal class FlipAnimation: AbstractAnimation {
             self.lastDuration = self.randomDuration
         }
     }
+    override var type: AnimationType? {
+        return AnimationType.Flip
+    }
 
     private var originalHeight: CGFloat?
     private var lastDuration: Double?
