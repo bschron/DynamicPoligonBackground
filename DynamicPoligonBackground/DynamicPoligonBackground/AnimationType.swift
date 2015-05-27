@@ -9,7 +9,7 @@
 import Foundation
 
 internal enum AnimationType: UInt32 {
-    case Flip, ChangeColor, ChangeAlpha, Drop
+    case Flip, ChangeColor, ChangeAlpha, Drop, Shrink
     
     static func count() -> UInt32 {
         var maxValue: UInt32 = 0
@@ -28,6 +28,8 @@ internal enum AnimationType: UInt32 {
             animation = FlipAnimation(target: target)
         case .Drop:
             animation = DropAnimation(target: target)
+        case .Shrink:
+            animation = ShrinkAnimation(target: target)
         }
         
         return animation

@@ -47,6 +47,13 @@ internal class AnimationFactory {
             }
         }
     }
+    private var shrinkAnimationPool: List<ShrinkAnimation> = List<ShrinkAnimation>() {
+        didSet {
+            if self.shrinkAnimationPool.count > self.maximumPoolSize {
+                self.shrinkAnimationPool.removeLast()
+            }
+        }
+    }
     internal var countEstimatedObjectsToAnimate: Int = 0
     private var maximumPoolSize: Int {
         return self.countEstimatedObjectsToAnimate / 2
@@ -62,6 +69,8 @@ internal class AnimationFactory {
             return self.dropAnimationPool.list
         case .Flip:
             return self.flipAnimationPool.list
+        case .Shrink:
+            return self.shrinkAnimationPool.list
         }
     }
     
@@ -122,6 +131,8 @@ internal class AnimationFactory {
             self.dropAnimationPool.insert(animation as! DropAnimation)
         case .Flip:
             self.flipAnimationPool.insert(animation as! FlipAnimation)
+        case .Shrink:
+            self.shrinkAnimationPool.insert(animation as! ShrinkAnimation)
         }
         
         animation.target = nil

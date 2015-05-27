@@ -24,6 +24,7 @@
 		86AB56DC1B14BAA600C6A8E4 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */; };
 		86CC5FD41B153F6800E1A4D5 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC5FD31B153F6800E1A4D5 /* List.swift */; };
 		86CC5FD81B1547DE00E1A4D5 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC5FD71B1547DE00E1A4D5 /* AnimationType.swift */; };
+		86FC65321B15F75C00E6C8B4 /* ShrinkAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FC65311B15F75C00E6C8B4 /* ShrinkAnimation.swift */; };
 		86FD7D641B15192C00947434 /* DropAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD7D631B15192C00947434 /* DropAnimation.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		86AB56DB1B14BAA600C6A8E4 /* RGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		86CC5FD31B153F6800E1A4D5 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		86CC5FD71B1547DE00E1A4D5 /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		86FC65311B15F75C00E6C8B4 /* ShrinkAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShrinkAnimation.swift; sourceTree = "<group>"; };
 		86FD7D631B15192C00947434 /* DropAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 				864D99D41B115A8E00459B0C /* DynamicPoligonBackground.swift */,
 				864D99D61B115BF100459B0C /* AnimationFactory.swift */,
 				864D99DA1B115CE200459B0C /* AbstractAnimation.swift */,
+				86FC65311B15F75C00E6C8B4 /* ShrinkAnimation.swift */,
 				86CC5FD71B1547DE00E1A4D5 /* AnimationType.swift */,
 				864D99DC1B11600700459B0C /* FlipAnimation.swift */,
 				86FD7D631B15192C00947434 /* DropAnimation.swift */,
@@ -268,6 +271,7 @@
 				864D99DD1B11600700459B0C /* FlipAnimation.swift in Sources */,
 				86CC5FD81B1547DE00E1A4D5 /* AnimationType.swift in Sources */,
 				86AB56DA1B14B04D00C6A8E4 /* Animateable.swift in Sources */,
+				86FC65321B15F75C00E6C8B4 /* ShrinkAnimation.swift in Sources */,
 				864D99D51B115A8E00459B0C /* DynamicPoligonBackground.swift in Sources */,
 				864D99DB1B115CE200459B0C /* AbstractAnimation.swift in Sources */,
 			);

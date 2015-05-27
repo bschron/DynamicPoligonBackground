@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DynamicPoligonBackground/AnimationFactory.swift"
-            timestampString = "454379718.382448"
+            timestampString = "454425301.614625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "privateMakeAnimation(_:isBrandNewClient:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DynamicPoligonBackground/AnimationFactory.swift"
-            timestampString = "454379718.382448"
+            timestampString = "454425301.614625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "privateMakeAnimation(_:isBrandNewClient:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DynamicPoligonBackground/AnimationFactory.swift"
-            timestampString = "454379718.382448"
+            timestampString = "454425301.614625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "AnimationFactory"
             landmarkType = "3">
             <Locations>
@@ -361,11 +361,11 @@
             condition = "target == nil"
             continueAfterRunningActions = "No"
             filePath = "DynamicPoligonBackground/AnimationFactory.swift"
-            timestampString = "454379718.382448"
+            timestampString = "454425301.614625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "setAnimation(forTarget:AnimationType:)"
             landmarkType = "5">
             <Actions>
@@ -376,6 +376,22 @@
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamicPoligonBackground/AnimationType.swift"
+            timestampString = "454425368.749415"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "animation(forType:forTarget:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
